@@ -14,16 +14,16 @@ import ru.spbstu.jdb.model.dao.ClientDao;
 import ru.spbstu.jdb.model.entities.Client;
 
 @Controller
-@RequestMapping(value = "/clients")
-public class ClientsController {
+@RequestMapping(value = "/sellers")
+public class SellersController {
 
 	@Autowired
 	ClientDao _clientDao;
 
 	@RequestMapping(method = RequestMethod.GET)
-	ModelAndView getClients() {
+	ModelAndView getSellers() {
 		ModelAndView mav = new ModelAndView("clients");
-		mav.addObject("clients", _clientDao.findAllClients());
+		mav.addObject("clients", _clientDao.findAllSellers());
 		return mav;
 	}
 
@@ -38,10 +38,10 @@ public class ClientsController {
 			@RequestParam(value = "address") String address, @RequestParam(value = "firstName") String firstName,
 			@RequestParam(value = "lastName") String lastName, @RequestParam(value = "patronymic") String patronymic,
 			@RequestParam(value = "phone") String phone, @RequestParam(value = "passport") String pase) {
-		Client client = new Client(lastName, firstName, patronymic, address, pase, phone, null, email, false);
+		Client client = new Client(lastName, firstName, patronymic, address, pase, phone, null, email, true);
 		_clientDao.addClient(client);
 		ModelAndView mav = new ModelAndView("clients");
-		mav.addObject("clients", _clientDao.findAllClients());
-		return "redirect:/clients";
+		mav.addObject("clients", _clientDao.findAllSellers());
+		return "redirect:/sellers";
 	}
 }

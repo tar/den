@@ -8,7 +8,7 @@ import java.util.Date;
  * @author Den
  * 
  */
-public class Client {
+public class Isurance {
 	private int _id;
 	private String _email;
 	private String _lastName;
@@ -20,10 +20,10 @@ public class Client {
 	private boolean _seller;
 	private Date _birthday;
 
-	public Client() {
+	public Isurance() {
 	}
 
-	public Client(String lastName, String firstName, String patronymic, String address, String pase,
+	public Isurance(String lastName, String firstName, String patronymic, String address, String pase,
 			String phone, Date birthday, String email, boolean isSeller) {
 		_lastName = lastName;
 		_firstName = firstName;

@@ -14,7 +14,7 @@ import ru.spbstu.jdb.model.entities.Client;
  *
  */
 @Component
-public class ClientMapper implements RowMapper<Client> {
+public class IsuranceMapper implements RowMapper<Client> {
 
 	@Override
 	public Client mapRow(ResultSet rs, int rowNum) throws SQLException {

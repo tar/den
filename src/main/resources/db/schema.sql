@@ -22,7 +22,7 @@ COMMIT;
 CREATE TABLE Models
 (
     Model varchar (30),
-    Make varchar (20),
+    Make varchar (20),	
 
     PRIMARY KEY (Model),
     FOREIGN KEY (Make) REFERENCES Makes (Make)
@@ -93,6 +93,7 @@ CREATE TABLE Clients
     Address varchar (255),
     Telephone char (12),
     Email varchar (255),
+    seller int,
 
     PRIMARY KEY (Client_Id),
     UNIQUE (Passport_number),
@@ -101,24 +102,6 @@ CREATE TABLE Clients
 );
 COMMIT;
 
-CREATE TABLE Sellers
-(
-    Seller_Id int,    
-    Last_name varchar (50),
-    First_name varchar (50),
-    Patronymic varchar (50),
-    Birthdate date,
-    Passport_number char (11),
-    Address varchar (255),
-    Telephone char (12),
-    Email varchar (255),
-
-    PRIMARY KEY (Seller_Id),
-    UNIQUE (Passport_number),
-    UNIQUE (Telephone),
-    UNIQUE (Email)
-);
-COMMIT;
 
 CREATE TABLE Insurances
 (
@@ -140,7 +123,7 @@ CREATE TABLE Car_sales
     
     PRIMARY KEY (Contract_number),
     FOREIGN KEY (VIN) REFERENCES Cars (VIN),
-    FOREIGN KEY (Seller_Id) REFERENCES Sellers (Seller_Id),
+    FOREIGN KEY (Seller_Id) REFERENCES Clients (Client_Id),
     FOREIGN KEY (Client_Id) REFERENCES Clients (Client_Id)
 );
 COMMIT;
@@ -160,7 +143,7 @@ CREATE TABLE Insurance_sales
     PRIMARY KEY (Contract_number),
     UNIQUE (Insurance_number),
     FOREIGN KEY (VIN) REFERENCES Cars (VIN),
-    FOREIGN KEY (Seller_Id) REFERENCES Sellers (Seller_Id),
+    FOREIGN KEY (Seller_Id) REFERENCES Clients (Client_Id),
     FOREIGN KEY (Client_Id) REFERENCES Clients (Client_Id),
     FOREIGN KEY (Insurance_number) REFERENCES Insurances (Insurance_number)
 );

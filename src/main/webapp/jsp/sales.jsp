@@ -32,35 +32,28 @@
 	<div id="main">
 		<div id="container">
 			<div id="content">
-				<input type="button" value="Add Client" onclick="addClient()"/>
+				<input type="button" value="Add Sale" onclick="addSale()"/>
 				<br>
 				<br>				
 				<table class="mainTable">
 				<thead>
 					<tr>
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Patronymic</th>
-						<th>Passport</th>
-						<th>Address</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>Birthday</th>
+						<th>Client</th>
+						<th>Seller</th>
+						<th>Car</th>
+						<th>Price</th>
+						<th>Date</th>
 						<th class="operationCol">Operation</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${clients}" var="client">
-						<tr id="tr_${client.id}">
-							<td>${client.firstName}</td>
-							<td>${client.lastName}</td>
-							<td>${client.patronymic}</td>
-							<td>${client.pase}</td>
-							<td>${client.address}</td>
-							<td>${client.email}</td>
-							<td>${client.phone}</td>
-							<td>${client.birthday}</td>
-							<td class="operationCol"><a href="javascript:deleteClient(${client.id},'${client.seller}')">Delete</a></td>
+					<c:forEach items="${sales}" var="sale">
+						<tr>
+							<td>${clients[sale.clientId].firstName}&nbsp;${clients[sale.clientId].firstName}</td>
+							<td>${sellers[sale.sellertId].firstName}&nbsp;${sellers[sale.sellerId].firstName}</td>
+							<td>${sale.vin}</td>
+							<td>${sale.price}</td>
+							<td>${sale.date}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -70,59 +63,49 @@
 	</div>
 </div>
 
-<div id="addClientDlg" style="display:none" title="New Client">
-	<form id="addClientForm" action="" method="POST">
+<div id="addSaleDlg" style="display:none" title="New Sale">
+	<form id="addSaleForm" action="" method="POST">
 	<table>
 	<tr>
-	<td><input type="text" name="firstName" placeholder="first name"/></td>
+	<td>
+		Client: 
+		<select name="clientId">
+		<c:forEach items="${clients}" var="client">
+			<option value="${client.id}">${client.firstName}&nbsp;${client.lastName}</option>
+		</c:forEach>
+		</select>
+	</td>
 	</tr>
 	<tr>
-	<td><input type="text" name="lastName" placeholder="last name"/></td>
+	<td>
+		Seller: 
+		<select name="sellerId">
+		<c:forEach items="${sellers}" var="seller">
+			<option value="${seller.id}">${seller.firstName}&nbsp;${seller.lastName}</option>
+		</c:forEach>
+		</select>
+	</td>
 	</tr>
 	<tr>
-	<td><input type="text" name="passport" placeholder="passport"/></td>
+	<td><input type="text" name="vin" placeholder="vin"/></td>
 	</tr>
 	<tr>
-	<td><input type="text" name="email" placeholder="email"/></td>
-	</tr>
-	<tr>
-	<td><input type="text" name="phone" placeholder="phone"/></td>
-	</tr>
-	<tr>
-	<td><input type="text" name="address" placeholder="address"/></td>
-	</tr>
-	<tr>
-	<td><input type="text" name="patronymic" placeholder="patronymic"/></td>
+	<td><input type="text" name="price" placeholder="price"/></td>
 	</tr>
 	</table>
 	</form>
 </div>
 
 <script type="text/javascript">
-	function addClient(){
-		$('#addClientDlg').dialog({modal:true, width:380, height:'auto', buttons: {
+	function addSale(){
+		$('#addSaleDlg').dialog({modal:true, width:380, height:'auto', buttons: {
             'Add': function() {
-				$('#addClientForm').submit();
+				$('#addSaleForm').submit();
             },
             'Cancel': function() {
                 $(this).dialog('close');
             }
         }});
-	}
-	function deleteClient(id, isSeller){
-		if(confirm("Are you shure to delete client?")){
-			var deleteUrl;
-			if(isSeller=='true'){
-				deleteUrl="${sellers_url}/"+id;
-			}else{
-				deleteUrl="${clients_url}/"+id;				
-			}
-			$.ajax({url:deleteUrl,
-	        	type:'DELETE'
-	        }).done(function() {
-	        	$('#tr_'+id).remove();
-	        });
-		}
 	}
 </script>
 

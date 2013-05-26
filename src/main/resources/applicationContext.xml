@@ -57,8 +57,13 @@
 
 	<bean id = "clientMapper" class = "ru.spbstu.jdb.model.dao.rowmappers.ClientMapper">
 	</bean>
+	<bean id = "saleMapper" class = "ru.spbstu.jdb.model.dao.rowmappers.SaleMapper">
+	</bean>
 	
 	<bean id="clientDao" class="ru.spbstu.jdb.model.dao.ClientDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="saleDao" class="ru.spbstu.jdb.model.dao.SaleDao">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 </beans>

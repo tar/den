@@ -1,1 +1,0 @@
-<div align="center">All rights reserved Denis Davlechin</div>
