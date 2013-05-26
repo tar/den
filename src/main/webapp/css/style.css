@@ -1,0 +1,409 @@
+/*   Reset styles
+---------------------------------------------- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {margin:0; padding:0;}
+html, body {height:100%;}
+table {border-collapse:collapse;	border-spacing:0;}
+fieldset, img {border: 0;}
+address, caption, cite, code, dfn, em, th, var {font-style:normal; font-weight:normal;}
+ol, ul {list-style:none;}
+caption, th {text-align:left;}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal;}
+q:before, q:after {content:'';}
+abbr, acronym {border:0;}
+body {font-weight:normal; font-size:11px; font-family:Arial,"Helvetica CY","Nimbus Sans L",sans-serif; width:100%; background-color:#fff;}
+a {color:blue; outline:none; text-decoration:underline;} 
+a:hover {text-decoration:none;}
+p {margin:0 0 18px}
+img {border:none;}
+input {vertical-align:middle; outline:none;}
+input[type="text"] {height:18px; line-height:18px;}
+select, textarea, input[type="text"] {margin:0px; border:1px solid #b0b0b0; padding:0px 4px; font:normal 11px arial; color:#3d3d3d;}
+select {padding:0px; height:20px;}
+select[size] {height:auto;}
+
+
+/*   General
+---------------------------------------------- */
+h1 {color:#891a50; font:bold 44px arial; text-align:center; padding:30px 0 0 0;}
+h2 {color:#891a50; font:bold 15px arial;}
+button {font-size:10px;}
+.nowrap {white-space:nowrap;}
+.right {float:right;}
+.center {text-align:center;}
+.description {font:normal 10px/10px arial; color:#3d3d3d;}	
+.lastTd  td{padding-bottom:0;}
+
+
+
+	/*   Wrapper
+	---------------------------------------------- */
+	#wrapper {width:100%; min-width:1000px; min-height:100%; height:auto !important; height:100%; padding:0 0 60px 60px;}
+    .middleTable {width:830px;}
+
+		/*   Header
+		---------------------------------------------- */
+		#header {padding:15px 20px 0 20px;}
+		#header {background:url(../img/fade.png) left bottom repeat-x; padding:15px 0 0 0; position:fixed; z-index:100; top:0; width: 100%;} /*fixed header styles*/
+		.mainLogo {float:left; display:inline-block; width:111px; height:280px; background:transparent url('../img/logo1.png') 0 0 no-repeat; margin-bottom:14px;}
+		.mainLogo {margin-left:20px;} /*fixed header styles*/
+		.login {float:right; margin-top:23px;}
+		.login {margin-right:20px;} /*fixed header styles*/
+		.userName {font-size:10px; color:#3d3d3d; margin-right:7px;}
+		.loginLink {font-size:10px; color:#891a50;}
+        .headerWhiteRect {background-color:#fff; height:100%; left:0; margin-top:-5px; position:absolute; top:0; width:100%; z-index:-1;}
+		
+		
+			/*   Navigation
+			---------------------------------------------- */
+			#navigation {margin-bottom:25px; clear:both;}			
+			#navigation {margin:0 20px;} /*fixed header styles*/		
+			#navigation  td {width:1%; line-height:0; font-size:0;}
+			/*#navigation  td.rubberEnd {width:90%; background-color:#891a50;}*/
+			#navigation  td div {position:relative;}
+			#navigation  td a.navLink {background:transparent url('../img/menuButtons.png') 0 0 no-repeat; display:block; height:26px; margin-right:1px; width:165px;}
+			#navigation  td a.aboutBut {background-position: 0 0;}
+			#navigation  td a.teamBut {background-position: 0 -26px;}
+			#navigation  td a.ratingBut {background-position: 0 -52px;}
+			#navigation  td a.schoolBut {background-position: 0 -78px;}
+			#navigation  td a.contactBut {background-position: 0 -104px;}	
+			#navigation  td a:hover.aboutBut, #navigation  td a.aboutBut:active, #navigation  td a.aboutBut.selected {background-position: 0 -130px;}
+			#navigation  td a:hover.teamBut, #navigation  td a:active.teamBut, #navigation  td a.teamBut.selected {background-position: 0 -156px;}
+			#navigation  td a:hover.ratingBut, #navigation  td a:active.ratingBut, #navigation  td a.ratingBut.selected {background-position: 0 -182px;}
+			#navigation  td a:hover.schoolBut, #navigation  td a:active.schoolBut, #navigation  td a.schoolBut.selected {background-position: 0 -208px;}
+			#navigation  td a:hover.contactBut, #navigation  td a:active.contactBut, #navigation  td a.contactBut.selected  {background-position: 0 -234px;}
+			
+			
+			.menuActiveEM #navigation  td a.aboutBut{background-position: 0 -130px;}
+			.menuActiveDM #navigation  td a.teamBut {background-position: 0 -156px;}
+			.menuActiveConT #navigation  td a.ratingBut {background-position: 0 -182px;}
+			.menuActiveCalcT #navigation  td a.schoolBut {background-position: 0 -208px;}
+			.menuActiveAlgo #navigation  td a.contactBut {background-position: 0 -234px;}
+			
+			
+			#navigation td ul {display:none; left:0; position:absolute; top:26px;}
+			#navigation td:hover ul {display:block;}
+			#navigation ul li a {background-color:#891A50; color:#fff; display:block; font:normal 11px arial; padding:6px 4px 6px 10px; text-decoration:none; width:151px;}
+			#navigation ul li a:hover {background-color:#A5386D;}
+
+            /*   Top Elements
+            ---------------------------------------------- */
+            .topElements {height:52px; padding: 0 20px;}
+            .topElements h2 {padding-top:25px; float:left;}
+            .topElements h2 a {color:#891A50;}
+            .rightControls {float:right; margin-top:30px;}
+            .rightControls .bigLink {margin-left:5px;}
+            .rightControls .topButton {display:block; margin-top:-15px;}
+			
+		/*   Main Content
+		---------------------------------------------- */
+		#main {padding-top:132px;} /*fixed header styles*/
+		#container {padding:0 20px;}
+		#content {width:100%;}
+		#content.middleTable {width:830px;}
+		.bigTableContainer {overflow:auto; height:100%;}
+		.bigTableContainer {overflow:visible;} /*fixed header styles*/
+		.bigLink {color:#891a50; font-size:12px;}		
+		
+		
+			/*   Buttons
+			---------------------------------------------- */
+			.btnGreen {cursor:pointer; padding:0; overflow:visible; background:none; border:0 none; position:relative; display:inline-block; height:26px; min-width:102px;}
+			.btnGreen span {position:absolute; height:17px; top:0; left:0; border:1px solid #9b9e7b; display:inline-block; font:bold 12px/16px arial; color:#fff; background:transparent url('../img/btnGreenBG.png') 0 0 repeat-x; padding:4px 10px 5px 10px; min-width:80px;}
+			.btnGreen:active span {border-color:#72764f; background-position:0 -20px; height:17px; }
+		
+		
+			/*   Main Table
+			---------------------------------------------- */			
+			.mainTable {width:100%; border-collapse:collapse; margin-bottom:4px;}
+			.mainTable thead {}
+			.mainTable tr {background-color:#fafaf9;}
+			.mainTable tr:hover td {background-color:#f3f6e8;}
+			.mainTable th {padding:4px 15px; border-top:2px solid #d6d4cd; border-bottom:2px solid #d6d4cd; background-color:#e3e6cf !important; font:bold 12px arial; color:#3d3d3d;}
+			.mainTable td {padding:1px 15px; border-top:1px solid #fff; border-bottom:1px solid #fff; font:normal 11px arial; color:#656565;}			
+			.mainTable a {color:#891a50;}
+			.mainTable .statusIcon {margin:0 0 -3px 3px;}
+			.mainTable .statusLink {display:inline-block; height:15px;}
+			.mainTable.shortTable {width:498px;}
+			.operationCol a, .operationCol button, .operationCol input {margin-right:7px;}
+			.operationCol input {font-size:10px; padding:1px 6px;}
+			.varNameCol select {width:208px;}
+			.bottomButton {margin-top:5px;}
+			
+				/*   Columns Width
+				---------------------------------------------- */
+				.operationCol {width:262px; height:19px;}
+				.statusCol {width:110px;}
+				.numberCol {width:115px;}
+				.dateCol {width:130px;}
+				.idCol {width:50px;}
+				.setAsDefaultCol {width:80px;}
+				.varNameCol {width:250px;}
+				.multipleValCol {width:90px;}
+				.variableIdCol {width:90px;}
+				.valueInputCol {width:163px;}
+				.resultsCheckCol {width:40px;}
+				.compoundCol {width:60px;}
+				.typeCol {width:80px;}
+				.tableCheckboxCol {width:20px;}
+			
+			
+			/*   Bottom Table
+			---------------------------------------------- */
+			.bottomTable td {padding:0 6px 6px 0; text-align:left; color:#656565;}
+			.bottomTable .btInput input{line-height:18px; color:#656565;}
+			.bottomTable .btBigHeader {font-size:12px; font-weight:bold;}			
+			
+			
+			/*   Define Constants
+			---------------------------------------------- */
+			.defineConstants .mainTable select {width:150px; margin:0;}
+			.defineConstants .mainTable input {width:140px; padding:0 4px;}
+			.defineConstants .mainTable input[type="button"] {width:auto;}
+			
+			
+			/*   Data Table
+			---------------------------------------------- */
+			.dataTable .mainTable td:hover {background-color:#E3E6CF; color:green; cursor:pointer;}
+			
+			
+			/*   Results
+			---------------------------------------------- */
+			.results .mainTable {margin-bottom:0;}
+			.results .mainTable th {line-height:19px; min-width:80px; padding:2px 10px 2px 18px; white-space:nowrap;}
+			.results .mainTable th select {width:120px; margin-left:4px;}
+			.results .mainTable th br {display:none;}			
+			.results .mainTable th.table-filterable {min-width:200px;}			
+			.results .mainTable th.resultsCheckCol {min-width:10px;}
+			.results .mainTable td {padding:1px 18px;}
+			.mainTable .table-sortable {background:transparent url('../img/sortable.png') 4px 4px no-repeat;}
+			.mainTable .table-sorted-asc {background-image:url('../img/sortUp.png');}
+			.mainTable .table-sorted-desc {background-image:url('../img/sortDown.png');}
+			.results .mainTable .resultsCheckTd {padding:1px 15px;}	
+						
+			/*   Results chart table
+            ---------------------------------------------- */
+            .results .chart td {text-align: center}
+            .results .chart td {padding:50px;}
+            
+	        /*   Results summary
+	        ---------------------------------------------- */
+	        .results .summary {padding:15px 0 0 0;}
+	        .results .summary {width:340px;}
+	        .results .summary .mainTable th {text-align: center}
+	        .results .summary .mainTable td {text-align: right}
+	        .results .summary .mainTable .value {text-align: center}
+	        
+	        /*   Results -- ED2M
+            ---------------------------------------------- */
+               .results .eD2M {width:1200px;}
+						
+			/*   Edit Dialog
+			---------------------------------------------- */
+			.editDialogWrap {background-color:#fafaf9;  border-top:1px solid #e1e3d3; border-bottom:1px solid #e1e3d3; padding:25px 0 25px 0;}
+			.editDialog {margin:0 auto; width:540px;}
+			.editDialog td {padding-bottom:20px;}
+			.editDialog tr.compoundSelect td {padding-bottom:10px;}
+			.editDialog td.noPad {padding-bottom:0px; text-align:center;}
+			.editDialogHeader {font:normal 11px arial; text-align:right; padding-right:8px; vertical-align:top; padding-top:3px;}			
+			.editDialog  select, .editDialog  textarea, .editDialog  input[type="text"]{margin:0px; border:1px solid #b0b0b0; padding:0px 4px; font:normal 11px arial; width:210px; color:#3d3d3d;}
+			.editDialog  input[type="text"]{height:18px; line-height:18px;}
+			.editDialog  input[type="file"]{font-size: 10px; padding: 1px 0px;}
+			.editDialog  select {height:20px; padding:0px; width:220px;}
+			.editDialog  select.multipleSelect {height:120px;}
+			.editDialog textarea {height:118px;}
+			.editDialog button {}
+			.editDialog .editDialogLink {vertical-align:top; padding:3px 0px 20px 10px;}
+			.editDialog .editDialogLink .description {position:static;}
+			.editDialog .editDialogLink a {font:normal 11px arial; color:#891a50; display:block;}
+			.editDialog .editDialogLink.withButton {padding-top:0;}
+			.editDialog .editDialogLink.withButton .description {display:block; clear:both;}		
+			.locker {width:15px; height:14px; background:transparent url('../img/locker.png') 0 0 no-repeat; display:inline-block; margin:-3px 3px 0 0;}
+			.locker.locked {background-position: 0 0;}
+			.locker.unlocked {background-position: -15px 0;}
+			.locker.inactive {background-position: -30px 0;}
+			.editDialogOpButton {padding-left:7px;}
+			.posWrapper {position:relative;}
+			.editDialog.inPopup {width:360px;}
+			.editDialog.inPopup table {margin-top:10px;}
+			
+				/*   Edit Dialog -- Algorithms
+				---------------------------------------------- */
+				.algorithms .editDialog {width:auto; margin:0;}
+				.algorithms .editDialog table {margin:0 auto;}
+				.algorithms .editDialog select {height:auto; width:auto; min-width:300px;}
+				.algorithms .editDialog input {width:214px;}
+				.algorithms .editDialog a {font:normal 11px arial; display:inline-block; margin-left:5px;}
+				
+					/*   Edit Dialog -- Algorithms Types
+					---------------------------------------------- */				
+					.editDialog.algorithmType {width:370px;}	
+					.algoTypeTable {width:370px;}
+					.algoTypeTable td, .algoTypeTable th {padding:4px; border:1px solid #b0b0b0;}
+					.algoTypeTable th {font-weight:bold; color:#3D3D3D;}
+					.algoTypeTable a {font-size:10px; color:#891A50; float:left; margin-right:3px;}
+					.algoTypeVars {width:270px;}
+					.editDialog.algorithmType p {text-align:center; font:normal 12px arial; margin-bottom:0;}
+					
+					/*   Edit Dialog -- Algorithms Variables
+					---------------------------------------------- */
+					.editDialog.algorithmVar .editDialogLink	{padding-left:0; padding-right:0; width:267px;}			
+					.editDialog.algorithmVar .editDialogLink a {display:inline-block; float:left; margin-right:5px;}
+					.editDialogSpan {padding-top:3px;}
+					.editDialogSpan span {font-weight:bold;}
+				
+				
+			/*   JQuery Dialog Styles Rewrite
+			---------------------------------------------- */
+			.ui-dialog {background-color:#fafaf9; padding:2px;}
+            .ui-dialog.override-z-index { z-index: 99 !important;}
+			.ui-widget-overlay {background-color:#fff; opacity:.85; filter:Alpha(Opacity=85);}
+			.ui-corner-all {-moz-border-radius:0px; -webkit-border-radius:0px; border-radius:0px; -khtml-border-radius:0px;}
+						
+			.ui-dialog .ui-dialog-titlebar {text-align:center; border:0 none;  padding:8px 20px; position:relative;}
+			.ui-dialog .ui-dialog-title {font:bold 13px arial; color:#891a50; float:none;}
+			.ui-widget-header .ui-icon {background:transparent url('../img/close.png') 0 0 no-repeat; width:11px; height:11px; margin:0; padding:0;}
+			.ui-dialog .ui-dialog-titlebar-close {width:11px; height:11px; top:11px; right:10px; margin:0; padding:0;}
+			.ui-dialog .ui-dialog-titlebar-close span {margin:0;}
+			.ui-widget-header .ui-state-hover {background-color:transparent; border:0 none; padding:0 !important;}
+			
+			.ui-dialog-content {height:auto;}
+			.ui-dialog .ui-dialog-content {border-top:1px solid #eeeeed;}			
+			.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {font:normal 12px/18px arial;}
+			.ui-dialog .ui-dialog-buttonpane {border-width:0; padding:10px 10px 8px 10px;}
+				
+				/*   JQuery Dialog Styles Rewrite -- buttons
+				---------------------------------------------- */
+				.ui-dialog-buttonset button.ui-state-default,
+				.ui-dialog-buttonset button.ui-state-hover  {width:auto !important; border-color:#9B9E7B; background:transparent url('../img/btnGreenBG.png') 0 0 repeat-x; margin:2px;}
+                .ui-dialog-buttonset .ui-button-text {font:bold 12px arial !important; color:#fff !important; padding:4px 10px 5px 10px !important; min-width:80px; height:17px;}
+				.ui-dialog-buttonset button.ui-state-active {border-color:#9B9E7B; background-position:0 -20px;}
+			
+			/*   Tabs Styles
+			---------------------------------------------- */
+				/*   JQuery Tab Styles Rewrite
+				---------------------------------------------- */
+				.graph.ui-tabs.ui-widget-content {background:0 none; border:0 none;}
+				.graph.ui-tabs.ui-widget-content .ui-widget-content {border:0 none;}
+				.graph.ui-tabs .ui-tabs-nav {background-color:#e1e3d3; border-bottom:0 none; margin:0 -1px 0 -1px; padding:0;}
+				.graph.ui-tabs .ui-tabs-nav li {
+					background-color:#e1e3d3;
+					border:0 none !important; 				
+					-moz-border-radius:0;
+					-webkit-border-radius:0;
+					-khtml-border-radius:0;
+					border-radius:0;
+					margin-right:0;
+				}
+				.graph.ui-tabs .ui-tabs-nav li.ui-state-hover {padding:0 !important;}
+				.graph.ui-tabs .ui-tabs-nav li.ui-state-active {background-color:#f3f6e8;}
+				.graph.ui-tabs .ui-tabs-nav li a {padding:.3em 1em;}
+				
+			/*   Popup Table
+			---------------------------------------------- */
+			.popupTable {width:100%; margin-top:10px;}
+			.popupTable td {padding-bottom:15px;}
+			.popupTable .lastTd td {padding-bottom:0; text-align:right; padding-right:16px;}
+			.popupTable select {height:20px; padding:0; margin:0; border:1px solid #b0b0b0; font:normal 11px arial; color:#3d3d3d;}
+			.popupTable input {height:18px; line-height:18px; padding:0 4px;}
+			.popupTableHeader {font:normal 12px arial; text-align:right; padding-right:8px; vertical-align:top; padding-top:3px; color:#3d3d3d;}
+			.popupTable .ui-sortable .ui-icon {height:0;}
+			.popupTable .ui-sortable li {color: black; cursor:move; margin-bottom:3px; padding-left:5px;}
+			
+			.popupTableVar {width:253px;}
+			.popupTableVar select {width:230px;}
+			.popupTableVal select {width:110px; margin:0;}
+			.popupTableVal input {width:100px;}
+			.popupTableAnn textarea {width:400px; padding:4px;}
+			.popupSelect {display:block; width:250px;}
+			
+				/*   Edit Variable Popup
+				---------------------------------------------- */	
+				.editVar .popupTable {margin-bottom:15px;}
+				.editVar .popupTableHeader{width:100px;}
+				.popupTableTextContent {font:bold 12px arial; padding-top:3px; color:#3d3d3d;}
+				.editVar input {width:370px;}
+				.popupTable .withDescTR td, .popupTable .validation td  {padding-bottom:0;}
+
+				/*   Add New Search ID Popup
+				---------------------------------------------- */
+				.ui-dialog .addNewSearchID {padding-right:10px; padding-top:15px;}
+				.addNewSearchID .popupTableVal {text-align:right;}
+				.addNewSearchID .popupTableVal input {width:283px;}
+
+				
+			/*   Edit Calculations
+			---------------------------------------------- */
+			.calculationTab .editDialogWrap {padding:12px 15px 10px 12px;}
+			.calculationTab .editDialogWrap td {padding-right:15px;}	
+			.calculationTab .editDialogWrap input {line-height:18px;}
+			.calculationTab .editDialogWrap label {margin-right:15px;}
+			.calculationTab .editDialogWrap label input {margin-left:5px; width:65px;}
+			.calculationTab .editDialogWrap td.editDialogHeader {padding-right:8px;}
+			.calculationTab .editDialogWrap .selectVariableRow {width:100%;}
+			.calculationTab .editDialogWrap .selectVariableRow td{padding-top:12px; vertical-align:top; padding-right:5px;}
+			.calculationTab .editDialogWrap .selectVariableRow td.withButton {width:95px; padding-top:10px; white-space:nowrap;}
+			.calculationTab .editDialogWrap .selectVariableRow td.withName {width:50px;}
+			.calculationTab .editDialogWrap .selectVariableRow td.withVariables {word-wrap:break-word; word-break:break-word;}
+			.calculationTab .editDialogWrap .editDialogHeader label {margin-right:0;}
+			.applyButtonsTop {clear:both; text-align:right; margin:4px 0 3px;}
+			.applyButtonsTop button {margin-left:1px;}
+			
+			.calcShowContsFilter {margin:6px; padding:6px; background-color:#edeee6; width:auto; float:left;}
+			.calcShowContsFilter input:first-child {margin:0 6px;}
+			.calcShowContsFilter input:last-child {margin-left:6px;}
+			
+			.resultVariablesTable {margin-top:5px; width:100%;}
+			.resultVariablesTable td {padding-bottom:5px;}
+			.resultVariablesTable label {display:block; line-height:12px;}
+			.resultVariablesTable label input {float:left;}			
+			.resultVariablesTable label span {display:block; padding-left:15px;}
+			
+				/*   Dialog with Checkboxes
+				---------------------------------------------- */
+				.dialogWithCheckbox li {position:relative; padding-left:12px;}
+				.dialogWithCheckbox input {left:0; position:absolute; top:2px;}
+				.dialogWithCheckbox label {display:inline-block; padding-left:5px;}				
+			
+				/*   Graphic Widget Styles
+				---------------------------------------------- */
+				.graph {width:100%;}
+				#tabs-1, #tabs-2 {background-color:#fafaf9;}				
+				#canvas {background-color:#FAFAF9 !important;}
+				
+					/*   Rewrite ui-dialog styles for Widget
+					---------------------------------------------- */
+					.graph .ui-widget-content {border:2px solid #e1e3d3; border-top-width:0; background:0 none; padding:0;}
+					.graph .ui-widget-content .ui-widget-content {border:0 none;}
+					.graph .ui-widget-content ul {background-color:#e1e3d3; border:0 none; padding:0;}
+					.graph .ui-tabs .ui-tabs-nav li {margin:-3px 0 0 0 !important; padding: 0px !important; background:0 none; border-radius:0; border-left:0 none !important; border-right:0 none !important; border-bottom:0 none !important;}
+					.graph .ui-tabs .ui-tabs-nav li a {padding:3px 12px;}
+					.graph .ui-state-active {background-color:#FAFAF9 !important; border-radius:0 !important;  border-top:2px solid #c7caaf !important; margin-top:-2px !important;}
+					.graph .ui-state-default {border-top:2px solid #FAFAF9 !important;}
+					.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {border-top:2px solid #c7caaf !important;}
+					.ui-state-default.ui-corner-top {border-top:2px solid #FAFAF9 !important;}
+					.graph .ui-state-active a {color:#3e3e3e !important;}
+					.graph .ui-state-default a {color:#656565 !important;}
+					
+				/*   Form Styles
+				---------------------------------------------- */
+				.calcDependenciesWrapper {margin:0 auto; width:600px;}
+				.calcDependenciesWrapper tbody tr:hover {background-color:#f0f0f0;}
+				.calcDependenciesWrapper tr td,th {border-top:1px solid #fff; border-bottom:1px solid #fff; padding:2px 0px 2px 10px; vertical-align:top;}
+				.calcDependenciesWrapper tr td.selectTD {width:210px;}
+				.calcDependenciesWrapper tr.dependenciesHeader th {vertical-align:middle; height:45px; font:bold 12px arial;}
+			
+			/*   Big Table with subtables
+			---------------------------------------------- */
+			.bigWrapperTable {border-collapse:collapse; width:100%;}
+			.bigWrapperTD {min-width:300px; padding-right:1px; vertical-align:top;}
+			.bigWrapperTable .mainTable td {text-align:right; white-space:nowrap;}
+			.bigWrapperTable .mainTable td:first-child {text-align:left;}
+			
+			.bigTablePage {margin-top:20px;}
+			.bigTablePage td {white-space:nowrap;}
+			
+			/*   Chart
+			---------------------------------------------- */
+			.chart {padding:0 20px;}
+			
+			

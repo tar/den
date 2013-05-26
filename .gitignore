@@ -1,0 +1,14 @@
+*.class
+bin/
+server/
+target/
+src/main/java/*.properties
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/*.properties
+src/main/webapp/WEB-INF/*.xml
+*.log
+.project
+.settings
+.classpath
+logs
+

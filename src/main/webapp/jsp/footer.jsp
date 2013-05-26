@@ -1,0 +1,1 @@
+<div align="center">All rights reserved Anton Lukashin</div>
