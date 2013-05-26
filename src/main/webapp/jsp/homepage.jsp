@@ -9,33 +9,27 @@
     <title></title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="<c:url value="/css/style.css"/>" type="text/css" media="screen, projection" />
-    <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/style.css"/>" />
-<%--
-    <!--[if IE]>
-    <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/ie.css"/>"/>
-    <![endif]-->
-    <!--[if IE 7]>
-    <link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/ie7.css"/>"/>
-    <![endif]-->
- --%>
+	<link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/style.css"/>"/>    
+	<!--[if IE]>
+	<link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/ie.css"/>"/>
+	<![endif]-->
+	<!--[if IE 7]>
+	<link type="text/css" rel="stylesheet" media="all" href="<c:url value="/css/ie7.css"/>"/>
+	<![endif]-->
 </head>
 
 <body>
 
 <div id="wrapper">
-    <div class="header">
+	<div id="header">
         <c:import url="/jsp/header.jsp"/>
-    </div>
-    <div id="main">
-        <div id="container">
-            <div id="content">
-                <strong>Content:</strong>
+	</div>
+	<div id="main">
+		<div id="container">
+			<div id="content">
+                This site provides functionality to sale cars and insurances
             </div>
         </div>
-    </div>
-    <div id="footer">
-        <c:import url="/jsp/footer.jsp"/>
     </div>
 </div>
 

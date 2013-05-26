@@ -6,29 +6,33 @@
     <tr>
         <td>
             <div>
-                <a class="navLink aboutBut" href="${about_api_url}"></a>
+                <a class="bigLink" href="${homepage_url}">Home</a>
             </div>
         </td>
         <td>
             <div>
-                <a class="navLink teamBut" href="${team_api_url}"></a>
+                <a class="bigLink" href="${cars_url}">Cars</a>
             </div>
         </td>
         <td>
             <div>
-                <a class="navLink ratingBut" href="${rating_api_url}"></a>
+                <a class="bigLink" href="${clients_url}">Clients</a>
             </div>
         </td>
         <td>
             <div>
-                <a class="navLink schoolBut" href="${school_api_url}"></a>
+                <a class="bigLink" href="${sellers_url}">Sellers</a>
             </div>
         </td>
         <td>
             <div>
-                <a class="navLink contactBut" href="${contact_api_url}"></a>
+                <a class="bigLink" href="${sales_url}">Sales</a>
             </div>
         </td>
-        <td class="rubberEnd">&nbsp;</td>
+        <td>
+            <div>
+                <a class="bigLink" href="${insurances_url}">Insurances</a>
+            </div>
+        </td>
     </tr>
 </table>

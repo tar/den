@@ -14,7 +14,7 @@
 
 	<appender name="rolefen" class="org.apache.log4j.RollingFileAppender">
 		<param name="Encoding" value="UTF-8" />
-		<param name="file" value="logs/rolefen.log" />
+		<param name="file" value="logs/jdb.log" />
 		<param name="MaxFileSize" value="50MB" />
 		<param name="MaxBackupIndex" value="1" />
 		<layout class="org.apache.log4j.PatternLayout">
@@ -23,7 +23,7 @@
 	</appender>
 
 
-    <logger name="com.mycelium" additivity="false">
+    <logger name="ru.spbstu" additivity="false">
         <level value="DEBUG"/>
         <appender-ref ref="stdout"/>
         <appender-ref ref="rolefen"/>

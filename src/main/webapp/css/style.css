@@ -37,53 +37,17 @@ button {font-size:10px;}
 
 	/*   Wrapper
 	---------------------------------------------- */
-	#wrapper {width:100%; min-width:1000px; min-height:100%; height:auto !important; height:100%; padding:0 0 60px 60px;}
+	#wrapper {width:100%; min-width:1000px; min-height:100%; height:auto !important; height:100%; padding:0 0 60px 60px;position:fixed;}
     .middleTable {width:830px;}
 
 		/*   Header
 		---------------------------------------------- */
 		#header {padding:15px 20px 0 20px;}
 		#header {background:url(../img/fade.png) left bottom repeat-x; padding:15px 0 0 0; position:fixed; z-index:100; top:0; width: 100%;} /*fixed header styles*/
-		.mainLogo {float:left; display:inline-block; width:111px; height:280px; background:transparent url('../img/logo1.png') 0 0 no-repeat; margin-bottom:14px;}
+		.mainLogo {float:left; display:inline-block; width:111px; height:180px; background:transparent url('../img/logo1.png') 0 0 no-repeat; margin-bottom:14px;}
 		.mainLogo {margin-left:20px;} /*fixed header styles*/
-		.login {float:right; margin-top:23px;}
-		.login {margin-right:20px;} /*fixed header styles*/
-		.userName {font-size:10px; color:#3d3d3d; margin-right:7px;}
-		.loginLink {font-size:10px; color:#891a50;}
         .headerWhiteRect {background-color:#fff; height:100%; left:0; margin-top:-5px; position:absolute; top:0; width:100%; z-index:-1;}
 		
-		
-			/*   Navigation
-			---------------------------------------------- */
-			#navigation {margin-bottom:25px; clear:both;}			
-			#navigation {margin:0 20px;} /*fixed header styles*/		
-			#navigation  td {width:1%; line-height:0; font-size:0;}
-			/*#navigation  td.rubberEnd {width:90%; background-color:#891a50;}*/
-			#navigation  td div {position:relative;}
-			#navigation  td a.navLink {background:transparent url('../img/menuButtons.png') 0 0 no-repeat; display:block; height:26px; margin-right:1px; width:165px;}
-			#navigation  td a.aboutBut {background-position: 0 0;}
-			#navigation  td a.teamBut {background-position: 0 -26px;}
-			#navigation  td a.ratingBut {background-position: 0 -52px;}
-			#navigation  td a.schoolBut {background-position: 0 -78px;}
-			#navigation  td a.contactBut {background-position: 0 -104px;}	
-			#navigation  td a:hover.aboutBut, #navigation  td a.aboutBut:active, #navigation  td a.aboutBut.selected {background-position: 0 -130px;}
-			#navigation  td a:hover.teamBut, #navigation  td a:active.teamBut, #navigation  td a.teamBut.selected {background-position: 0 -156px;}
-			#navigation  td a:hover.ratingBut, #navigation  td a:active.ratingBut, #navigation  td a.ratingBut.selected {background-position: 0 -182px;}
-			#navigation  td a:hover.schoolBut, #navigation  td a:active.schoolBut, #navigation  td a.schoolBut.selected {background-position: 0 -208px;}
-			#navigation  td a:hover.contactBut, #navigation  td a:active.contactBut, #navigation  td a.contactBut.selected  {background-position: 0 -234px;}
-			
-			
-			.menuActiveEM #navigation  td a.aboutBut{background-position: 0 -130px;}
-			.menuActiveDM #navigation  td a.teamBut {background-position: 0 -156px;}
-			.menuActiveConT #navigation  td a.ratingBut {background-position: 0 -182px;}
-			.menuActiveCalcT #navigation  td a.schoolBut {background-position: 0 -208px;}
-			.menuActiveAlgo #navigation  td a.contactBut {background-position: 0 -234px;}
-			
-			
-			#navigation td ul {display:none; left:0; position:absolute; top:26px;}
-			#navigation td:hover ul {display:block;}
-			#navigation ul li a {background-color:#891A50; color:#fff; display:block; font:normal 11px arial; padding:6px 4px 6px 10px; text-decoration:none; width:151px;}
-			#navigation ul li a:hover {background-color:#A5386D;}
 
             /*   Top Elements
             ---------------------------------------------- */
@@ -96,25 +60,25 @@ button {font-size:10px;}
 			
 		/*   Main Content
 		---------------------------------------------- */
-		#main {padding-top:132px;} /*fixed header styles*/
+		#main {padding-top:250px;} /*fixed header styles*/
 		#container {padding:0 20px;}
-		#content {width:100%;}
+		#content {width:100%;font-size:14px;}
 		#content.middleTable {width:830px;}
 		.bigTableContainer {overflow:auto; height:100%;}
 		.bigTableContainer {overflow:visible;} /*fixed header styles*/
-		.bigLink {color:#891a50; font-size:12px;}		
+		.bigLink {color:#891a50; font-size:16px;}		
 		
 		
 			/*   Buttons
 			---------------------------------------------- */
 			.btnGreen {cursor:pointer; padding:0; overflow:visible; background:none; border:0 none; position:relative; display:inline-block; height:26px; min-width:102px;}
-			.btnGreen span {position:absolute; height:17px; top:0; left:0; border:1px solid #9b9e7b; display:inline-block; font:bold 12px/16px arial; color:#fff; background:transparent url('../img/btnGreenBG.png') 0 0 repeat-x; padding:4px 10px 5px 10px; min-width:80px;}
+			.btnGreen span {position:absolute; height:17px; top:0; left:0; border:1px solid #9b9e7b; display:inline-block; font:bold 12px/16px arial; color:#fff; background:transparent url('/img/btnGreenBG.png') 0 0 repeat-x; padding:4px 10px 5px 10px; min-width:80px;}
 			.btnGreen:active span {border-color:#72764f; background-position:0 -20px; height:17px; }
 		
 		
 			/*   Main Table
 			---------------------------------------------- */			
-			.mainTable {width:100%; border-collapse:collapse; margin-bottom:4px;}
+			.mainTable {border-collapse:collapse; margin-bottom:4px;}
 			.mainTable thead {}
 			.mainTable tr {background-color:#fafaf9;}
 			.mainTable tr:hover td {background-color:#f3f6e8;}
@@ -126,25 +90,10 @@ button {font-size:10px;}
 			.mainTable.shortTable {width:498px;}
 			.operationCol a, .operationCol button, .operationCol input {margin-right:7px;}
 			.operationCol input {font-size:10px; padding:1px 6px;}
-			.varNameCol select {width:208px;}
-			.bottomButton {margin-top:5px;}
 			
 				/*   Columns Width
 				---------------------------------------------- */
-				.operationCol {width:262px; height:19px;}
-				.statusCol {width:110px;}
-				.numberCol {width:115px;}
-				.dateCol {width:130px;}
-				.idCol {width:50px;}
-				.setAsDefaultCol {width:80px;}
-				.varNameCol {width:250px;}
-				.multipleValCol {width:90px;}
-				.variableIdCol {width:90px;}
-				.valueInputCol {width:163px;}
-				.resultsCheckCol {width:40px;}
-				.compoundCol {width:60px;}
-				.typeCol {width:80px;}
-				.tableCheckboxCol {width:20px;}
+				.operationCol {width:100px; height:19px;}
 			
 			
 			/*   Bottom Table

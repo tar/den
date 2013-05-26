@@ -8,7 +8,7 @@
 
     <mvc:annotation-driven/>
     <context:annotation-config/>
-    <context:component-scan base-package="com.mycelium.rolefen.web.controllers"/>
+    <context:component-scan base-package="ru.spbstu.jdb.web.controllers"/>
 
 
     <mvc:resources mapping="/js/**" location="/js/" />

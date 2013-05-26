@@ -1,1 +1,1 @@
-<div align="center">All rights reserved Anton Lukashin</div>
+<div align="center">All rights reserved Denis Davlechin</div>
