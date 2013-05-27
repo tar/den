@@ -55,15 +55,45 @@
 
 	<tx:annotation-driven proxy-target-class="true" />
 
-	<bean id = "clientMapper" class = "ru.spbstu.jdb.model.dao.rowmappers.ClientMapper">
+	<bean id="clientMapper" class="ru.spbstu.jdb.model.dao.rowmappers.ClientMapper">
 	</bean>
-	<bean id = "saleMapper" class = "ru.spbstu.jdb.model.dao.rowmappers.SaleMapper">
+	<bean id="saleMapper" class="ru.spbstu.jdb.model.dao.rowmappers.SaleMapper">
 	</bean>
-	
+	<bean id="carMapper" class="ru.spbstu.jdb.model.dao.rowmappers.CarMapper">
+	</bean>
+	<bean id="insuranceMapper" class="ru.spbstu.jdb.model.dao.rowmappers.InsuranceMapper">
+	</bean>
+	<bean id="insSaleMapper" class="ru.spbstu.jdb.model.dao.rowmappers.InsurSaleMapper">
+	</bean>
+	<bean id="modelMapper" class="ru.spbstu.jdb.model.dao.rowmappers.ModelMapper">
+	</bean>
+	<bean id="makeMapper" class="ru.spbstu.jdb.model.dao.rowmappers.MakeMapper">
+	</bean>
+	<bean id="packagingMapper" class="ru.spbstu.jdb.model.dao.rowmappers.PackagingMapper">
+	</bean>
+
 	<bean id="clientDao" class="ru.spbstu.jdb.model.dao.ClientDao">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<bean id="saleDao" class="ru.spbstu.jdb.model.dao.SaleDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="carDao" class="ru.spbstu.jdb.model.dao.CarDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="insuranceDao" class="ru.spbstu.jdb.model.dao.InsuranceDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="insSaleDao" class="ru.spbstu.jdb.model.dao.InsurSaleDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="modelDao" class="ru.spbstu.jdb.model.dao.ModelDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="makeDao" class="ru.spbstu.jdb.model.dao.MakeDao">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="packagingDao" class="ru.spbstu.jdb.model.dao.PackagingDao">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 </beans>

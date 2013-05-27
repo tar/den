@@ -29,6 +29,9 @@ public class Model {
         _make = make;
     }
 
+    public void setMakeEntity(Make make) {
+        _makeEntity=make;
+    }
     public Make getMakeEntity() {
         return _makeEntity;
     }

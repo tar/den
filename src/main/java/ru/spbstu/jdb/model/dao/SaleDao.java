@@ -13,19 +13,20 @@ import ru.spbstu.jdb.model.entities.Sale;
 @Repository
 public class SaleDao extends NamedParameterJdbcDaoSupport {
 
-	private static final IdGenerator _idGen = new IdGenerator(100, 1);
+    private static final IdGenerator _idGen = new IdGenerator(100, 1);
 
-	@Autowired
-	private SaleMapper _salesMapper;
+    @Autowired
+    private SaleMapper _salesMapper;
 
-	public List<Sale> findAllSales() {
-		return getJdbcTemplate().query("select * from Car_Sales order by Date_contr desc", _salesMapper);
-	}
+    public List<Sale> findAllSales() {
+        return getJdbcTemplate().query("select * from Car_Sales order by Date_contr desc", _salesMapper);
+    }
 
-	public int addSale(Sale sl) {
-		return getJdbcTemplate().update(
-				"insert into Car_Sales (Contract_number, Client_Id, Seller_Id, VIN, Date_contr, Price",
-				_idGen.getNextId(), sl.getClientId(), sl.getSellerId(), sl.getVin(), sl.getDate(), sl.getPrice());
-	}
+    public int addSale(Sale sl) {
+        return getJdbcTemplate()
+                .update("insert into Car_Sales (Contract_number, Client_Id, Seller_Id, VIN, Date_contr, Price values (?,?,?,?,?,?)",
+                        _idGen.getNextId(), sl.getClientId(), sl.getSellerId(), sl.getVin(), sl.getDate(),
+                        sl.getPrice());
+    }
 
 }
