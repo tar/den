@@ -23,17 +23,17 @@ public class DaoTest {
 
 	@Test
 	public void testClientDao() {
-		List<Client> clients = _clientDao.findAllClients();
-		System.out.println("clients in db = " + clients.size());
-		_clientDao.addClient(new Client("test", "test", "testovich", "test", "test", "test", new Date(), "test", false));
-		clients = _clientDao.findAllClients();
-		System.out.println("clients in db = " + clients.size());
-		for (Client client : clients) {
-			System.out.println(client.getEmail());
-		}
-		_clientDao.removeClientById(1);
-		clients = _clientDao.findAllClients();
-		System.out.println("clients in db = " + clients.size());		
+//		List<Client> clients = _clientDao.findAllClients();
+//		System.out.println("clients in db = " + clients.size());
+//		_clientDao.addClient(new Client("test", "test", "testovich", "test", "test", "test", new Date(), "test", false));
+//		clients = _clientDao.findAllClients();
+//		System.out.println("clients in db = " + clients.size());
+//		for (Client client : clients) {
+//			System.out.println(client.getEmail());
+//		}
+//		_clientDao.removeClientById(1000);
+//		clients = _clientDao.findAllClients();
+//		System.out.println("clients in db = " + clients.size());		
 	}
 
 }

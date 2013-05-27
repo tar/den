@@ -48,8 +48,8 @@
 				<tbody>
 					<c:forEach items="${sales}" var="sale">
 						<tr>
-							<td>${clients[sale.clientId].firstName}&nbsp;${clients[sale.clientId].firstName}</td>
-							<td>${sellers[sale.sellerId].firstName}&nbsp;${sellers[sale.sellerId].firstName}</td>
+							<td>${clients[sale.clientId].firstName}&nbsp;${clients[sale.clientId].lastName}</td>
+							<td>${sellers[sale.sellerId].firstName}&nbsp;${sellers[sale.sellerId].lastName}</td>
 							<td>${sale.vin}</td>
 							<td>${sale.price}</td>
 							<td>${sale.date}</td>
@@ -70,7 +70,7 @@
 		Client: 
 		<select name="clientId">
 		<c:forEach items="${clients}" var="client">
-			<option value="${client.id}">${client.firstName}&nbsp;${client.lastName}</option>
+			<option value="${client.value.id}">${client.value.firstName}&nbsp;${client.value.lastName}</option>
 		</c:forEach>
 		</select>
 	</td>
@@ -80,7 +80,7 @@
 		Seller: 
 		<select name="sellerId">
 		<c:forEach items="${sellers}" var="seller">
-			<option value="${seller.id}">${seller.firstName}&nbsp;${seller.lastName}</option>
+			<option value="${seller.value.id}">${seller.value.firstName}&nbsp;${seller.value.lastName}</option>
 		</c:forEach>
 		</select>
 	</td>

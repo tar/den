@@ -37,13 +37,13 @@ button {font-size:10px;}
 
 	/*   Wrapper
 	---------------------------------------------- */
-	#wrapper {width:100%; min-width:1000px; min-height:100%; height:auto !important; height:100%; padding:0 0 60px 60px;position:fixed;}
+	#wrapper {width:100%; min-width:1000px; min-height:100%; height:auto !important; height:100%; padding:0 0 60px 60px;}
     .middleTable {width:830px;}
 
 		/*   Header
 		---------------------------------------------- */
 		#header {padding:15px 20px 0 20px;}
-		#header {background:url(../img/fade.png) left bottom repeat-x; padding:15px 0 0 0; position:fixed; z-index:100; top:0; width: 100%;} /*fixed header styles*/
+		#header {background:url(../img/fade.png) left bottom repeat-x; padding:15px 0 0 0;  z-index:100; top:0; width: 100%;} /*fixed header styles*/
 		.mainLogo {float:left; display:inline-block; width:111px; height:180px; background:transparent url('../img/logo1.png') 0 0 no-repeat; margin-bottom:14px;}
 		.mainLogo {margin-left:20px;} /*fixed header styles*/
         .headerWhiteRect {background-color:#fff; height:100%; left:0; margin-top:-5px; position:absolute; top:0; width:100%; z-index:-1;}
@@ -60,7 +60,7 @@ button {font-size:10px;}
 			
 		/*   Main Content
 		---------------------------------------------- */
-		#main {padding-top:250px;} /*fixed header styles*/
+		#main {padding-top:40px;} /*fixed header styles*/
 		#container {padding:0 20px;}
 		#content {width:100%;font-size:14px;}
 		#content.middleTable {width:830px;}
@@ -96,111 +96,6 @@ button {font-size:10px;}
 				.operationCol {width:100px; height:19px;}
 			
 			
-			/*   Bottom Table
-			---------------------------------------------- */
-			.bottomTable td {padding:0 6px 6px 0; text-align:left; color:#656565;}
-			.bottomTable .btInput input{line-height:18px; color:#656565;}
-			.bottomTable .btBigHeader {font-size:12px; font-weight:bold;}			
-			
-			
-			/*   Define Constants
-			---------------------------------------------- */
-			.defineConstants .mainTable select {width:150px; margin:0;}
-			.defineConstants .mainTable input {width:140px; padding:0 4px;}
-			.defineConstants .mainTable input[type="button"] {width:auto;}
-			
-			
-			/*   Data Table
-			---------------------------------------------- */
-			.dataTable .mainTable td:hover {background-color:#E3E6CF; color:green; cursor:pointer;}
-			
-			
-			/*   Results
-			---------------------------------------------- */
-			.results .mainTable {margin-bottom:0;}
-			.results .mainTable th {line-height:19px; min-width:80px; padding:2px 10px 2px 18px; white-space:nowrap;}
-			.results .mainTable th select {width:120px; margin-left:4px;}
-			.results .mainTable th br {display:none;}			
-			.results .mainTable th.table-filterable {min-width:200px;}			
-			.results .mainTable th.resultsCheckCol {min-width:10px;}
-			.results .mainTable td {padding:1px 18px;}
-			.mainTable .table-sortable {background:transparent url('../img/sortable.png') 4px 4px no-repeat;}
-			.mainTable .table-sorted-asc {background-image:url('../img/sortUp.png');}
-			.mainTable .table-sorted-desc {background-image:url('../img/sortDown.png');}
-			.results .mainTable .resultsCheckTd {padding:1px 15px;}	
-						
-			/*   Results chart table
-            ---------------------------------------------- */
-            .results .chart td {text-align: center}
-            .results .chart td {padding:50px;}
-            
-	        /*   Results summary
-	        ---------------------------------------------- */
-	        .results .summary {padding:15px 0 0 0;}
-	        .results .summary {width:340px;}
-	        .results .summary .mainTable th {text-align: center}
-	        .results .summary .mainTable td {text-align: right}
-	        .results .summary .mainTable .value {text-align: center}
-	        
-	        /*   Results -- ED2M
-            ---------------------------------------------- */
-               .results .eD2M {width:1200px;}
-						
-			/*   Edit Dialog
-			---------------------------------------------- */
-			.editDialogWrap {background-color:#fafaf9;  border-top:1px solid #e1e3d3; border-bottom:1px solid #e1e3d3; padding:25px 0 25px 0;}
-			.editDialog {margin:0 auto; width:540px;}
-			.editDialog td {padding-bottom:20px;}
-			.editDialog tr.compoundSelect td {padding-bottom:10px;}
-			.editDialog td.noPad {padding-bottom:0px; text-align:center;}
-			.editDialogHeader {font:normal 11px arial; text-align:right; padding-right:8px; vertical-align:top; padding-top:3px;}			
-			.editDialog  select, .editDialog  textarea, .editDialog  input[type="text"]{margin:0px; border:1px solid #b0b0b0; padding:0px 4px; font:normal 11px arial; width:210px; color:#3d3d3d;}
-			.editDialog  input[type="text"]{height:18px; line-height:18px;}
-			.editDialog  input[type="file"]{font-size: 10px; padding: 1px 0px;}
-			.editDialog  select {height:20px; padding:0px; width:220px;}
-			.editDialog  select.multipleSelect {height:120px;}
-			.editDialog textarea {height:118px;}
-			.editDialog button {}
-			.editDialog .editDialogLink {vertical-align:top; padding:3px 0px 20px 10px;}
-			.editDialog .editDialogLink .description {position:static;}
-			.editDialog .editDialogLink a {font:normal 11px arial; color:#891a50; display:block;}
-			.editDialog .editDialogLink.withButton {padding-top:0;}
-			.editDialog .editDialogLink.withButton .description {display:block; clear:both;}		
-			.locker {width:15px; height:14px; background:transparent url('../img/locker.png') 0 0 no-repeat; display:inline-block; margin:-3px 3px 0 0;}
-			.locker.locked {background-position: 0 0;}
-			.locker.unlocked {background-position: -15px 0;}
-			.locker.inactive {background-position: -30px 0;}
-			.editDialogOpButton {padding-left:7px;}
-			.posWrapper {position:relative;}
-			.editDialog.inPopup {width:360px;}
-			.editDialog.inPopup table {margin-top:10px;}
-			
-				/*   Edit Dialog -- Algorithms
-				---------------------------------------------- */
-				.algorithms .editDialog {width:auto; margin:0;}
-				.algorithms .editDialog table {margin:0 auto;}
-				.algorithms .editDialog select {height:auto; width:auto; min-width:300px;}
-				.algorithms .editDialog input {width:214px;}
-				.algorithms .editDialog a {font:normal 11px arial; display:inline-block; margin-left:5px;}
-				
-					/*   Edit Dialog -- Algorithms Types
-					---------------------------------------------- */				
-					.editDialog.algorithmType {width:370px;}	
-					.algoTypeTable {width:370px;}
-					.algoTypeTable td, .algoTypeTable th {padding:4px; border:1px solid #b0b0b0;}
-					.algoTypeTable th {font-weight:bold; color:#3D3D3D;}
-					.algoTypeTable a {font-size:10px; color:#891A50; float:left; margin-right:3px;}
-					.algoTypeVars {width:270px;}
-					.editDialog.algorithmType p {text-align:center; font:normal 12px arial; margin-bottom:0;}
-					
-					/*   Edit Dialog -- Algorithms Variables
-					---------------------------------------------- */
-					.editDialog.algorithmVar .editDialogLink	{padding-left:0; padding-right:0; width:267px;}			
-					.editDialog.algorithmVar .editDialogLink a {display:inline-block; float:left; margin-right:5px;}
-					.editDialogSpan {padding-top:3px;}
-					.editDialogSpan span {font-weight:bold;}
-				
-				
 			/*   JQuery Dialog Styles Rewrite
 			---------------------------------------------- */
 			.ui-dialog {background-color:#fafaf9; padding:2px;}
@@ -227,26 +122,7 @@ button {font-size:10px;}
                 .ui-dialog-buttonset .ui-button-text {font:bold 12px arial !important; color:#fff !important; padding:4px 10px 5px 10px !important; min-width:80px; height:17px;}
 				.ui-dialog-buttonset button.ui-state-active {border-color:#9B9E7B; background-position:0 -20px;}
 			
-			/*   Tabs Styles
-			---------------------------------------------- */
-				/*   JQuery Tab Styles Rewrite
-				---------------------------------------------- */
-				.graph.ui-tabs.ui-widget-content {background:0 none; border:0 none;}
-				.graph.ui-tabs.ui-widget-content .ui-widget-content {border:0 none;}
-				.graph.ui-tabs .ui-tabs-nav {background-color:#e1e3d3; border-bottom:0 none; margin:0 -1px 0 -1px; padding:0;}
-				.graph.ui-tabs .ui-tabs-nav li {
-					background-color:#e1e3d3;
-					border:0 none !important; 				
-					-moz-border-radius:0;
-					-webkit-border-radius:0;
-					-khtml-border-radius:0;
-					border-radius:0;
-					margin-right:0;
-				}
-				.graph.ui-tabs .ui-tabs-nav li.ui-state-hover {padding:0 !important;}
-				.graph.ui-tabs .ui-tabs-nav li.ui-state-active {background-color:#f3f6e8;}
-				.graph.ui-tabs .ui-tabs-nav li a {padding:.3em 1em;}
-				
+
 			/*   Popup Table
 			---------------------------------------------- */
 			.popupTable {width:100%; margin-top:10px;}
@@ -264,95 +140,12 @@ button {font-size:10px;}
 			.popupTableVal input {width:100px;}
 			.popupTableAnn textarea {width:400px; padding:4px;}
 			.popupSelect {display:block; width:250px;}
-			
-				/*   Edit Variable Popup
-				---------------------------------------------- */	
-				.editVar .popupTable {margin-bottom:15px;}
-				.editVar .popupTableHeader{width:100px;}
-				.popupTableTextContent {font:bold 12px arial; padding-top:3px; color:#3d3d3d;}
-				.editVar input {width:370px;}
-				.popupTable .withDescTR td, .popupTable .validation td  {padding-bottom:0;}
-
+	
 				/*   Add New Search ID Popup
 				---------------------------------------------- */
 				.ui-dialog .addNewSearchID {padding-right:10px; padding-top:15px;}
 				.addNewSearchID .popupTableVal {text-align:right;}
 				.addNewSearchID .popupTableVal input {width:283px;}
 
-				
-			/*   Edit Calculations
-			---------------------------------------------- */
-			.calculationTab .editDialogWrap {padding:12px 15px 10px 12px;}
-			.calculationTab .editDialogWrap td {padding-right:15px;}	
-			.calculationTab .editDialogWrap input {line-height:18px;}
-			.calculationTab .editDialogWrap label {margin-right:15px;}
-			.calculationTab .editDialogWrap label input {margin-left:5px; width:65px;}
-			.calculationTab .editDialogWrap td.editDialogHeader {padding-right:8px;}
-			.calculationTab .editDialogWrap .selectVariableRow {width:100%;}
-			.calculationTab .editDialogWrap .selectVariableRow td{padding-top:12px; vertical-align:top; padding-right:5px;}
-			.calculationTab .editDialogWrap .selectVariableRow td.withButton {width:95px; padding-top:10px; white-space:nowrap;}
-			.calculationTab .editDialogWrap .selectVariableRow td.withName {width:50px;}
-			.calculationTab .editDialogWrap .selectVariableRow td.withVariables {word-wrap:break-word; word-break:break-word;}
-			.calculationTab .editDialogWrap .editDialogHeader label {margin-right:0;}
-			.applyButtonsTop {clear:both; text-align:right; margin:4px 0 3px;}
-			.applyButtonsTop button {margin-left:1px;}
-			
-			.calcShowContsFilter {margin:6px; padding:6px; background-color:#edeee6; width:auto; float:left;}
-			.calcShowContsFilter input:first-child {margin:0 6px;}
-			.calcShowContsFilter input:last-child {margin-left:6px;}
-			
-			.resultVariablesTable {margin-top:5px; width:100%;}
-			.resultVariablesTable td {padding-bottom:5px;}
-			.resultVariablesTable label {display:block; line-height:12px;}
-			.resultVariablesTable label input {float:left;}			
-			.resultVariablesTable label span {display:block; padding-left:15px;}
-			
-				/*   Dialog with Checkboxes
-				---------------------------------------------- */
-				.dialogWithCheckbox li {position:relative; padding-left:12px;}
-				.dialogWithCheckbox input {left:0; position:absolute; top:2px;}
-				.dialogWithCheckbox label {display:inline-block; padding-left:5px;}				
-			
-				/*   Graphic Widget Styles
-				---------------------------------------------- */
-				.graph {width:100%;}
-				#tabs-1, #tabs-2 {background-color:#fafaf9;}				
-				#canvas {background-color:#FAFAF9 !important;}
-				
-					/*   Rewrite ui-dialog styles for Widget
-					---------------------------------------------- */
-					.graph .ui-widget-content {border:2px solid #e1e3d3; border-top-width:0; background:0 none; padding:0;}
-					.graph .ui-widget-content .ui-widget-content {border:0 none;}
-					.graph .ui-widget-content ul {background-color:#e1e3d3; border:0 none; padding:0;}
-					.graph .ui-tabs .ui-tabs-nav li {margin:-3px 0 0 0 !important; padding: 0px !important; background:0 none; border-radius:0; border-left:0 none !important; border-right:0 none !important; border-bottom:0 none !important;}
-					.graph .ui-tabs .ui-tabs-nav li a {padding:3px 12px;}
-					.graph .ui-state-active {background-color:#FAFAF9 !important; border-radius:0 !important;  border-top:2px solid #c7caaf !important; margin-top:-2px !important;}
-					.graph .ui-state-default {border-top:2px solid #FAFAF9 !important;}
-					.ui-state-default.ui-corner-top.ui-tabs-active.ui-state-active {border-top:2px solid #c7caaf !important;}
-					.ui-state-default.ui-corner-top {border-top:2px solid #FAFAF9 !important;}
-					.graph .ui-state-active a {color:#3e3e3e !important;}
-					.graph .ui-state-default a {color:#656565 !important;}
-					
-				/*   Form Styles
-				---------------------------------------------- */
-				.calcDependenciesWrapper {margin:0 auto; width:600px;}
-				.calcDependenciesWrapper tbody tr:hover {background-color:#f0f0f0;}
-				.calcDependenciesWrapper tr td,th {border-top:1px solid #fff; border-bottom:1px solid #fff; padding:2px 0px 2px 10px; vertical-align:top;}
-				.calcDependenciesWrapper tr td.selectTD {width:210px;}
-				.calcDependenciesWrapper tr.dependenciesHeader th {vertical-align:middle; height:45px; font:bold 12px arial;}
-			
-			/*   Big Table with subtables
-			---------------------------------------------- */
-			.bigWrapperTable {border-collapse:collapse; width:100%;}
-			.bigWrapperTD {min-width:300px; padding-right:1px; vertical-align:top;}
-			.bigWrapperTable .mainTable td {text-align:right; white-space:nowrap;}
-			.bigWrapperTable .mainTable td:first-child {text-align:left;}
-			
-			.bigTablePage {margin-top:20px;}
-			.bigTablePage td {white-space:nowrap;}
-			
-			/*   Chart
-			---------------------------------------------- */
-			.chart {padding:0 20px;}
-			
+	
 			

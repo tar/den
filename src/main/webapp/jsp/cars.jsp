@@ -95,7 +95,7 @@
 	</tr>
 	<tr>
 	<td>
-		<input id="carVin" type="text" disabled="disabled"/>
+		<input id="carVin" type="text" name="vin" style="display:none"/>
 	</tr>
 	<tr>
 	<td><input type="text" name="price" placeholder="price"/></td>

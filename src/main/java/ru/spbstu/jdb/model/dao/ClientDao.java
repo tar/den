@@ -14,7 +14,7 @@ import ru.spbstu.jdb.model.entities.Client;
 public class ClientDao extends NamedParameterJdbcDaoSupport {
 	
 	
-	private static final IdGenerator _idGen=new IdGenerator(100, 1);
+	private static final IdGenerator _idGen=new IdGenerator(1000, 1);
 	
 	@Autowired
 	private ClientMapper _clientMapper;

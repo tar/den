@@ -27,7 +27,9 @@
 	<div id="main">
 		<div id="container">
 			<div id="content">
-                This site provides functionality to sale cars and insurances
+                This site provides functionality to sale cars and insurances.
+                
+                <strong>Author - Denis Davlechin. Group - 4081/1 vecher.</strong>
             </div>
         </div>
     </div>
