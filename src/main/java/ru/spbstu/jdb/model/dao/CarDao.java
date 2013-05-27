@@ -12,11 +12,15 @@ import ru.spbstu.jdb.model.entities.Car;
 @Repository
 public class CarDao extends NamedParameterJdbcDaoSupport {
 
-    @Autowired
-    private CarMapper _mapper;
+	@Autowired
+	private CarMapper _mapper;
 
-    public List<Car> findAllCars() {
-        return getJdbcTemplate().query("select * from Cars", _mapper);
-    }
+	public List<Car> findAllCars() {
+		return getJdbcTemplate().query("select * from Cars", _mapper);
+	}
+
+	public void execProc() {
+		getJdbcTemplate().execute("execute procedure DEL_CARS");
+	}
 
 }

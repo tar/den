@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title></title>
+	<title>Clients</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>

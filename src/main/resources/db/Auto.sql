@@ -7,7 +7,7 @@ COMMIT;
 CREATE DATABASE '/var/lib/firebird/2.1/data/Auto.fdb' user 'SYSDBA' password 'firebird';
 COMMIT;
 
-CONNECT ''/var/lib/firebird/2.1/data/Auto.fdb'' user 'SYSDBA' password 'firebird';
+CONNECT '/var/lib/firebird/2.1/data/Auto.fdb' user 'SYSDBA' password 'firebird';
 COMMIT;
 
 CREATE TABLE Makes

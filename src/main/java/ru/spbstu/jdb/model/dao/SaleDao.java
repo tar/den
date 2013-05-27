@@ -24,7 +24,7 @@ public class SaleDao extends NamedParameterJdbcDaoSupport {
 
     public int addSale(Sale sl) {
         return getJdbcTemplate()
-                .update("insert into Car_Sales (Contract_number, Client_Id, Seller_Id, VIN, Date_contr, Price values (?,?,?,?,?,?)",
+                .update("insert into Car_Sales (Contract_number, Client_Id, Seller_Id, VIN, Date_contr, Price) values (?,?,?,?,?,?)",
                         _idGen.getNextId(), sl.getClientId(), sl.getSellerId(), sl.getVin(), sl.getDate(),
                         sl.getPrice());
     }

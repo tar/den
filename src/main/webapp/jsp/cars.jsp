@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Sales</title>
+	<title>Cars</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<script type="text/javascript" src="<c:url value="/js/jquery.js"/>"></script>
@@ -32,27 +32,35 @@
 	<div id="main">
 		<div id="container">
 			<div id="content">
-				<input type="button" value="Add Sale" onclick="addSale()"/>
+				<input type="button" value="Exec proc" onclick="execProc()"/>
 				<br>
-				<br>				
+				<br>
 				<table class="mainTable">
 				<thead>
 					<tr>
-						<th>Client</th>
-						<th>Seller</th>
-						<th>Car</th>
-						<th>Price</th>
-						<th>Date</th>
+						<th>VIN</th>
+						<th>Packaging</th>
+						<th>Production year</th>
+						<th>kilometers</th>
+						<th>Condition</th>
+						<th>Owners</th>
+						<th>Color</th>
+						<th>Interior color</th>
+						<th class="operationCol">Operation</th>
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${sales}" var="sale">
+					<c:forEach items="${cars}" var="car">
 						<tr>
-							<td>${clients[sale.clientId].firstName}&nbsp;${clients[sale.clientId].firstName}</td>
-							<td>${sellers[sale.sellerId].firstName}&nbsp;${sellers[sale.sellerId].firstName}</td>
-							<td>${sale.vin}</td>
-							<td>${sale.price}</td>
-							<td>${sale.date}</td>
+							<td>${car.vin}</td>
+							<td>${car.packaging}</td>
+							<td>${car.productionYear}</td>
+							<td>${car.operationalKilometers}</td>
+							<td>${car.condition}</td>
+							<td>${car.owners}</td>
+							<td>${car.colour}</td>
+							<td>${car.interiorColor}</td>
+							<td class="operationCol"><a href="javascript:saleCar(${car.vin})">Sale</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>
@@ -87,12 +95,7 @@
 	</tr>
 	<tr>
 	<td>
-		Car: 
-		<select name="vin">
-		<c:forEach items="${cars}" var="car">
-			<option value="${car.vin}">${car.vin}</option>
-		</c:forEach>
-		</select></td>
+		<input id="carVin" type="text" disabled="disabled"/>
 	</tr>
 	<tr>
 	<td><input type="text" name="price" placeholder="price"/></td>
@@ -102,7 +105,8 @@
 </div>
 
 <script type="text/javascript">
-	function addSale(){
+	function saleCar(vin){
+		$('#carVin').val(vin);
 		$('#addSaleDlg').dialog({modal:true, width:380, height:'auto', buttons: {
             'Add': function() {
 				$('#addSaleForm').submit();
@@ -111,6 +115,14 @@
                 $(this).dialog('close');
             }
         }});
+	}
+	function execProc(){
+		$.ajax({url:"${cars_url}",
+        	type:'DELETE'
+        }).done(function() {
+        	alert("Done!");
+        	window.location=window.location.href;
+        });
 	}
 </script>
 

@@ -29,10 +29,5 @@
                 <a class="bigLink" href="${sales_url}">Sales</a>
             </div>
         </td>
-        <td>
-            <div>
-                <a class="bigLink" href="${insurances_url}">Insurances</a>
-            </div>
-        </td>
     </tr>
 </table>

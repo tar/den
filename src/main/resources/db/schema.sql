@@ -4,7 +4,7 @@ COMMIT;
 DROP DATABASE '/var/lib/firebird/2.1/data/Auto.fdb' user 'SYSDBA' password 'firebird';
 COMMIT;
 
-CREATE DATABASE '/var/lib/firebird/2.1/data/Auto.fdb' user 'SYSDBA' password 'firebird';
+CREATE DATABASE '/var/lib/firebird/2.1/data/Auto.fdb' user 'SYSDBA' password 'firebird' DEFAULT CHARACTER SET UTF8;
 COMMIT;
 
 CONNECT '/var/lib/firebird/2.1/data/Auto.fdb' user 'SYSDBA' password 'firebird';
@@ -93,12 +93,9 @@ CREATE TABLE Clients
     Address varchar (255),
     Telephone char (12),
     Email varchar (255),
-    seller int,
+    Seller int,
 
-    PRIMARY KEY (Client_Id),
-    UNIQUE (Passport_number),
-    UNIQUE (Telephone),
-    UNIQUE (Email)
+    PRIMARY KEY (Client_Id)
 );
 COMMIT;
 
@@ -147,4 +144,125 @@ CREATE TABLE Insurance_sales
     FOREIGN KEY (Client_Id) REFERENCES Clients (Client_Id),
     FOREIGN KEY (Insurance_number) REFERENCES Insurances (Insurance_number)
 );
+COMMIT;
+
+CREATE VIEW FIND_CARS(
+    VIN,
+    MODEL)
+AS
+SELECT vin, model FROM cars, packagings WHERE
+(cars.packaging = packagings.packaging) AND ((SELECT COUNT(contract_number)
+FROM car_sales WHERE car_sales.vin = cars.vin) > 1  ) AND (model = 'PAJERO')
+;
+commit;
+
+CREATE VIEW FIND_CLIENTS(
+    CLIENT_ID,
+    LAST_NAME,
+    FIRST_NAME,
+    C_CONTRACT_NUMBER)
+AS
+SELECT FIRST 5 client_id, last_name, first_name, COUNT(contract_number)
+FROM clients, car_sales WHERE clients.client_id = car_sales.client_id
+GROUP BY client_id, last_name, first_name ORDER BY COUNT(contract_number) DESC, client_id
+;
+commit;
+
+SET TERM ^ ;
+CREATE OR ALTER procedure DEL_CARS
+as
+BEGIN
+    DELETE FROM car_sales WHERE car_sales.vin NOT IN
+    (SELECT insurance_sales.vin FROM insurance_sales);
+END^
+SET TERM ; ^
+commit;
+
+SET TERM ^ ;
+CREATE OR ALTER procedure COUNT_CAR
+returns (
+    OUT_VIN char(17),
+    AVG_PRICE integer,
+    OUT_COUNT integer,
+    OUT_MIN_PRICE integer,
+    OUT_MAX_PRICE integer)
+as
+BEGIN
+FOR SELECT car_sales.vin,  COUNT (car_sales.vin),
+MIN (car_sales.price), MAX (car_sales.price)
+FROM car_sales
+GROUP BY vin ORDER BY vin
+INTO :out_vin, :out_count, :out_MIN_price, :out_MAX_price do
+begin
+avg_price=(out_max_price-out_min_price)/out_count;
+SUSPEND;
+end
+END^
+SET TERM ; ^
+commit;
+
+CREATE GENERATOR gen_contract_number;
+SET generator gen_contract_number TO 200;
+
+SET TERM ^ ;
+CREATE OR ALTER TRIGGER INSERT_CAR_SALES FOR CAR_SALES
+ACTIVE BEFORE INSERT POSITION 0
+AS
+BEGIN
+    NEW.contract_number = GEN_ID(gen_contract_number, 1);
+END
+^
+SET TERM ; ^
+commit;
+
+SET TERM ^ ;
+CREATE OR ALTER TRIGGER DELETE_CAR FOR CARS
+ACTIVE AFTER DELETE POSITION 0
+AS
+BEGIN
+    DELETE FROM car_sales WHERE (car_sales.vin = OLD.vin);
+END
+^
+SET TERM ; ^
+commit;
+
+CREATE EXCEPTION 
+FIRST_EXCEPTION 'Отсутствует страховка! Добавление машины невозможно.';
+commit;
+
+SET TERM ^ ;
+CREATE OR ALTER TRIGGER INSERT_CAR FOR CAR_SALES
+ACTIVE BEFORE INSERT POSITION 0
+AS
+declare variable c_contract integer;
+BEGIN
+    SELECT count(insurance_sales.contract_number)
+    from  car_sales, insurance_sales
+    where new.seller_id = insurance_sales.seller_id
+    and new.vin=insurance_sales.vin into :c_contract;
+
+    if (c_contract=0)
+    then
+    exception first_exception;
+END
+^
+SET TERM ; ^
+commit;
+
+SET TERM ^ ;
+CREATE OR ALTER TRIGGER DELETE_INSURANCE FOR INSURANCE_SALES
+ACTIVE BEFORE INSERT POSITION 0
+AS
+declare variable c_contract integer;
+BEGIN
+    SELECT count(insurance_sales.contract_number)
+    from  insurance_sales  where insurance_sales.vin=NEW.vin
+    into :c_contract;
+
+    if (c_contract>0)
+    then
+    DELETE FROM insurance_sales WHERE insurance_sales.vin=NEW.vin;
+END
+^
+SET TERM ; ^
 COMMIT;
